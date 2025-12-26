@@ -1,97 +1,53 @@
-# MAP4PLAY
+🛠️ O que você vai precisar instalar?
+XAMPP: É o que faz o seu computador virar um servidor de internet.
 
-Projeto acadêmico desenvolvido para a **UNIVESP**, como parte de um trabalho do Projeto Integrador II do Grupo 013.
+PostgreSQL: É a gaveta onde guardamos todas as informações das quadras.
 
-## 🎯 Motivação e Objetivo
+Node.js: É a ferramenta necessária para rodar o aplicativo de celular.
 
-A cidade de São Paulo carece de estrutura desportiva para a sua população. E as estruturas existentes ainda são pouco divulgadas e por consequência pouco utilizadas. Essa foi a motivação por trás do presente trabalho.
+🚀 Passo a Passo (Do zero ao App)
+1. Preparando o Banco de Dados (PostgreSQL)
+Instale o PostgreSQL e use a senha 827#asimov (como definido no seu código).
 
-O objetivo do sistema é criar uma **plataforma web** para mapeamento quadras esportivas, permitindo um melhor usufruto dos munícipes destas estruturas. 
+Crie um banco de dados chamado map4play.
 
----
+Dica de mestre: Você precisa ativar a função de "mapa" no banco. Abra a ferramenta de texto (Query Tool) e digite: CREATE EXTENSION postgis;.
 
-## 📌 Funcionalidades (caso seja intressnate descrever o que )
+2. Colocando o Servidor para Rodar
+Copie seus arquivos PHP para a pasta C:\xampp\htdocs.
 
-- **Página inicial** com informações gerais blablablabla
-- **Sobre**:  proposta do projeto blablablablablablablabla
-- **Clientes**: seção dedicada a usuários ou parceiros.
-- **Contato**: formulário de contato integrado ao backend (PHP).
-- **API de quadras** (`api_quadras.php`): interface para gerenciar dados de quadras esportivas.
-- **Serviços** (`services.php`): organização da lógica de funcionalidades.
-- **Conexão com banco de dados** (`conexão.php`).
+O arquivo config.php já está pronto para conectar ao seu banco de dados.
 
----
+O arquivo .htaccess vai proteger suas senhas automaticamente para ninguém de fora ver.
 
-## 🛠️ Tecnologias utilizadas
-- **Frontend**:
-  - HTML5
-  - CSS3
-  - JavaScript
-- **Backend**:
-  - PHP
-- **Banco de Dados**:
-  - MySQL (via `conexão.php`)
-- **Ferramentas de desenvolvimento**:
-  - VS Code
-  - Git/GitHub para controle de versão
+3. Ligando o Aplicativo
+Abra uma pasta preta (Terminal/PowerShell) na pasta Map4PlayApp.
 
----
+Digite npm install e espere as barras carregarem.
 
-## 📂 Estrutura do projeto
-MAP4PLAY/
+Descubra o endereço do seu computador na rede (digite ipconfig no terminal e procure por "IPv4").
 
-│── index.html # Página inicial
+No arquivo App.js, troque o endereço IP pelo seu número encontrado.
 
-│── about.html 
+4. Vendo a Mágica no Celular
+Digite npx expo start no computador.
 
-│── client.html 
+Instale o app Expo Go no seu celular (Android ou iPhone).
 
-│── contact.html 
+Abra o Expo Go e leia o código quadrado (QR Code) que apareceu na tela do computador.
 
-│── api_quadras.php 
+🧐 O que o App faz?
+Mostra Quadras Perto de Você: O app usa o GPS do celular para achar as quadras no banco de dados.
 
-│── conexão.php 
+Filtra por Zona: Você pode escolher ver só quadras da Zona Leste ou Zona Sul, por exemplo.
 
-│── services.php 
+Inclusão: O mapa avisa se a quadra tem rampa ou banheiro adaptado.
 
-│── processa_contato.php
+Segurança: Seus dados estão protegidos por um sistema que bloqueia curiosos no servidor.
 
-│── teste.php 
+🆘 Problemas Comuns
+O celular não conecta: Verifique se o celular e o computador estão no mesmo Wi-Fi.
 
-│── css/ 
+Erro de Banco: Verifique se a senha no config.php é a mesma que você colocou no PostgreSQL.
 
-│── js/ 
-
-│── images/ 
-
-│── README.md 
-
-yaml
-Copiar código
-
----
-
-## 🚀 Como executar o projeto
-
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/teu-user/MAP4PLAY.git
-Configure um servidor local (XAMPP, WAMP ou similar).
-
-Coloque a pasta MAP4PLAY no diretório do servidor (ex.: htdocs no XAMPP).
-
-Configure o banco de dados MySQL e ajuste as credenciais no arquivo conexão.php.
-
-Acesse no navegador:
-
-http://localhost/MAP4PLAY
-
-👥 Equipe
-
-Projeto desenvolvido por pelos  alunos do Grupo 013 como o parte das atividades acadêmicas.
-
-### Alunos: Descrever nossos nomes?????????????????
-
-📄 Licença
-
-Este projeto é de uso exclusivamente ACADÊMICO e não é permitido para fins comerciais. 
+MAP 4 PLAY © 2025 - Desenvolvido pela Equipe de alunos na UNIVESP.
