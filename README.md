@@ -1,26 +1,19 @@
 🛠️ O que você vai precisar instalar?
+
 XAMPP: É o que faz o seu computador virar um servidor de internet.
 
 PostgreSQL: É a gaveta onde guardamos todas as informações das quadras.
 
 Node.js: É a ferramenta necessária para rodar o aplicativo de celular.
 
-🚀 Passo a Passo (Do zero ao App)
-1. Preparando o Banco de Dados (PostgreSQL)
-Instale o PostgreSQL e use a senha 827#asimov (como definido no seu código).
-
-Crie um banco de dados chamado map4play.
-
-Dica de mestre: Você precisa ativar a função de "mapa" no banco. Abra a ferramenta de texto (Query Tool) e digite: CREATE EXTENSION postgis;.
-
-2. Colocando o Servidor para Rodar
+1. Colocando o Servidor para Rodar
 Copie seus arquivos PHP para a pasta C:\xampp\htdocs.
 
 O arquivo config.php já está pronto para conectar ao seu banco de dados.
 
 O arquivo .htaccess vai proteger suas senhas automaticamente para ninguém de fora ver.
 
-3. Ligando o Aplicativo
+2. Ligando o Aplicativo
 Abra uma pasta preta (Terminal/PowerShell) na pasta Map4PlayApp.
 
 Digite npm install e espere as barras carregarem.
@@ -29,7 +22,7 @@ Descubra o endereço do seu computador na rede (digite ipconfig no terminal e pr
 
 No arquivo App.js, troque o endereço IP pelo seu número encontrado.
 
-4. Vendo a Mágica no Celular
+3. Comando para abrir no celular
 Digite npx expo start no computador.
 
 Instale o app Expo Go no seu celular (Android ou iPhone).
