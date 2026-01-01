@@ -1,11 +1,34 @@
-🛠️ O que você vai precisar instalar?
+🛠 Passo a Passo de Instalação e Configuração
+1. Ambiente de Servidor e Banco de Dados
+XAMPP: Baixe e instale o XAMPP. Mova todos os seus arquivos PHP (conexao_pg.php, config.php, api_quadras_pg.php, etc.) para a pasta C:\xampp\htdocs\map4play.
 
-XAMPP: É o que faz o seu computador virar um servidor de internet.
+PostgreSQL + PostGIS:
 
-PostgreSQL: É a gaveta onde guardamos todas as informações das quadras.
+Instale o PostgreSQL e o pgAdmin.
 
-Node.js: É a ferramenta necessária para rodar o aplicativo de celular.
+No pgAdmin, crie um banco chamado map4play.
 
+Abra a Query Tool no banco e execute: CREATE EXTENSION postgis; para habilitar funções geográficas como ST_Distance e ST_DWithin.
+
+Execute o conteúdo do seu arquivo database.sql para criar a tabela quadras com as colunas de acessibilidade, iluminação e localização.
+
+Configuração de Senha: Abra o arquivo config.php e altere o campo 'password' para a nova senha que você definiu na instalação do PostgreSQL.
+
+2. Ambiente de Desenvolvimento Mobile (Node.js & Expo)
+Node.js: Instale a versão LTS. Isso corrigirá o erro de comando npx não reconhecido que você teve anteriormente.
+
+Dependências: No terminal, dentro da pasta APP-main, execute:
+
+Bash
+
+npm install
+npx expo install react-native-maps expo-location
+Isso instalará as bibliotecas necessárias para o mapa e o GPS do celular.
+
+3. Configuração do Android Studio (Emulador)
+SDK: No Android Studio, vá em Settings > Android SDK. Clique em Edit e defina um caminho (ex: C:\Android\SDK). Não instale na raiz C:\.
+
+Variáveis de Ambiente: Adicione o caminho do SDK às variáveis de ambiente do Windows (ANDROID_HOME) para que o Expo reconheça o emulador.
 1. Colocando o Servidor para Rodar
 Copie seus arquivos PHP para a pasta C:\xampp\htdocs.
 
